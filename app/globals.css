@@ -1,27 +1,199 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #212529;
+  --secondary-color: #000000;
+  --tertiary-purple-color: #A020F0;
+  --tertiary-green-color: #00FF7F;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body{
+  background-color: var(--primary-color);
+  @apply mx-[16px] md:mx-[64px] lg:mx-[96px] text-[22px] md:text-[20px] lg:text-[18px] text-white
+}
+
+.nav{
+  background-color: transparent;
+  @apply -mx-[16px] md:-mx-[64px] lg:-mx-[96px] px-[16px] md:px-[64px] lg:px-[96px];
+;
+}
+
+button{
+  background-color: var(--tertiary-purple-color);
+  color: white;
+  border-radius: 100px;
+  @apply px-[25px] py-[15px] hover:opacity-75
+}
+
+.link{
+  @apply hover:text-[#a020f0] hover:underline
+}
+
+
+.hero-img{
+  @apply w-[290px] h-[290px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px]
+}
+
+.construction-img {
+  @apply w-[290px] h-[290px] md:w-[400px] md:h-[400px] lg:w-[400px] lg:h-[400px] mx-auto;
+}
+
+
+.green-span{
+  color: var(--tertiary-green-color)
+}
+
+.hero-title, h2{
+  @apply text-[50px] font-bold md:text-[52px] lg:text-[74px]
+}
+
+h2, .portfolio-heading {
+  @apply text-[36px] font-bold;
+}
+
+
+.hero-description{
+  @apply text-[20px] font-semibold md:text-[20px] lg:text-[18px]
+}
+
+.hero-description-two{
+  @apply text-[22px] md:text-[22px] lg:text-[20px];
+}
+
+
+.hero-description-three {
+  @apply text-[22px] md:text-[22px] lg:text-[20px];
+}
+
+
+.icon{
+  @apply w-[24px] h-[24px] md:w-[32px] md:h-[32px] lg:w-[32px] lg:h-[32px]
+}
+
+h3{
+  @apply text-[30px] font-bold
+}
+
+.construction{
+  @apply w-[250px] h-[178px] md:w-[700px] md:h-[400px] lg:w-[732px] lg:h-[699px]
+}
+
+
+.floating-element{
+  animation: floating-animation 3s ease-in-out infinite;
+}
+
+@keyframes floating-animation {
+  0% {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(0, -15px);
+  }
+  100% {
+    transform: translate(0,0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+
+  }
+}
+
+.logo-slide{
+  animation: 50s slide infinite linear;
+  display: flex;
+}
+
+.logos:hover .logo-slide{
+  animation-play-state: paused;
+}
+
+.logos:before, .logos:after{
+  position: absolute;
+top: 0;
+width: 30px;
+height: 100%;
+content: '';
+z-index: 2;
+
+}
+
+.logos:before{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to left,rgba(255,255,255,0), #212529);
+  content: '';
+  z-index: 2;
+}
+
+.logos:after{
+  right:0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #212529);
+
+}
+
+
+
+
+@keyframes slide2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.logo-slide2 {
+  animation: 50s slide2 infinite linear;
+  display: flex;
+}
+
+.logos2:hover .logo-slide2 {
+  animation-play-state: paused;
+}
+
+.logos2:before,
+.logos2:after {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  content: '';
+  z-index: 2;
+}
+
+.logos2:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #212529);
+  content: '';
+  z-index: 2;
+}
+
+.logos2:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #212529);
+}
+
+.logo{
+font-family: 'Dancing Script', cursive;
+  @apply text-3xl
+  
+
 }

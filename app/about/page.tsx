@@ -24,8 +24,9 @@ const page: React.FC<pageProps> = () => {
           complexity. In addition to my core skills, I am currently expanding
           my knowledge in AI and machine learning concepts, further enhancing
           my ability to deliver innovative and cutting-edge solutions. If
-          you're looking for a talented and dedicated developer to help bring
-          your project to life, please don't hesitate to contact me.
+          you&apos;re looking for a talented and dedicated developer to help
+          bring your project to life, please don&apos;t hesitate to contact
+          me.
         </p>
       </div>
       <h3 className="mt-10">Skills</h3>

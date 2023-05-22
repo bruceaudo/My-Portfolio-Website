@@ -108,7 +108,7 @@ export default function Home() {
         <Image priority className="hero-img ml-[40px] sm:ml-0 floating-element" src={Hero} alt="Hero-img" />
         <div>
           <h1 className="hero-title mt-10">
-            Hello, <span className="text-[#a020f0]">I'm Bruce</span>
+            Hello, <span className="text-[#a020f0]">I&apos;m Bruce</span>
           </h1>
           <p className="hero-description mt-3">
             Full Stack Developer | <span className="green-span">
